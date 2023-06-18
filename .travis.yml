@@ -1,3 +1,12 @@
 language: java
 jdk:
   - openjdk20
+
+deploy:
+  provider: codedeploy
+  revision_type: github
+  access_key_id: AKIAQ2AHWWY6MPTUSNWF
+  secret_access_key: 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
+  application: bookStore
+  deployment_group: CodeDeployGitHubBookStore
+  region: us-east-1
