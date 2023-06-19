@@ -4,19 +4,16 @@ phases:
   install:
     runtime-versions:
       java: corretto20
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - echo Build started on `date`
-      - gradle build
+      - ./gradlew bootJar
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
-  type: zip
   files:
+    - build/libs/*.jar
+    - scripts/*.sh
     - appspec.yml
-    - 'build/libs/*.jar'
   discard-paths: yes
