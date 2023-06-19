@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - openjdk20
+  - openjdk17
 
 deploy:
   provider: codedeploy
@@ -8,5 +8,5 @@ deploy:
   access_key_id: AKIAQ2AHWWY6MPTUSNWF
   secret_access_key: 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
   application: bookStore
-  deployment_group: CodeDeployBookStore
+  deployment_group: demo-code-deploy-group
   region: us-east-1
